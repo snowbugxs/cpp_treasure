@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<file title="windows" size="10Mb"/>
+	<!--File Fisrt Comment-->
+	<!--File Second Comment-->
+	<paths attr="directory">
+		<!--Paths Comment-->
+		<path title="北京">abc</path>
+		<path title="上海">efg</path>
+		<path title="广州">hij</path>
+	</paths>
+	<paths>
+		<path title="111">klm</path>
+		<path title="222">nop</path>
+		<path title="333">qrs</path>
+	</paths>
+</config>
