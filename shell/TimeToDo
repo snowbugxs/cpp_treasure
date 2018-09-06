@@ -1,0 +1,58 @@
+#! /bin/bash
+
+if [ $1 == "-w" ]
+then
+	nohup /home/xuwei.huang/TimeToDo &
+	echo 
+	exit
+
+elif [ $1 == "-s" ]
+then
+	#ps -ef |grep tmdb |awk '{printf $2}'
+	#ID=`ps -ef | grep "TimeToDo.sh" | grep -v grep | awk '{print $2}'`
+	#                                                ""里面不允许有 - 的字样 干扰grep选项
+	#ID=`ps -ef | grep "TimeToDo.sh" | grep -v grep | grep -v "-s" `
+	IDS=`ps -ef | grep "TimeToDo" | grep -v grep | grep "home" | awk '{print $2}'`
+	echo "---------------"
+	echo "IDS : $IDS"
+	for id in $IDS
+	do
+		echo "kill -9 $id"
+		kill -9 $id
+	done
+	echo "---------------"
+
+elif [ $1 == "-h" ]
+then
+	echo " -h   : for help"
+	echo " -w   : start update"
+	echo " -s   : stop update"
+
+else
+	cd ~/02_assign_environment/
+	echo > update.log
+	echo > update_err.log
+
+	while true
+	do
+		./host_deploy.sh >> /home/xuwei.huang/02_assign_environment/update.log 2>&1
+		sleep 20m
+		
+		curTime=$(date)
+		echo "curTime = ${curTime}"
+
+	#	curHour=$(date "+%H")
+	#	if [ ${curHour} > 21 ]
+	#	then
+	#		echo "$(date) I want to sleep 12 hours"
+	#		sleep 12h
+			
+	#		echo "$(date) A new day, clear yesterday's runlog"
+	#		cd ~/02_assign_environment/
+	#		echo > update.log
+	#		echo > update_err.log
+	#	fi
+
+	done
+
+fi

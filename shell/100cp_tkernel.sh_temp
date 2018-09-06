@@ -1,0 +1,28 @@
+#!/bin/bash
+
+cp ~/tempkernel/arb ~/run/arb/
+echo " cp ~/tempkernel/arb ~/run/arb/ "
+
+cp ~/tempkernel/compositor ~/run/compositor/
+echo " cp ~/tempkernel/compositor ~/run/compositor/ "
+
+cp ~/tempkernel/fgateway ~/run/fgateway/
+echo " cp ~/tempkernel/fgateway ~/run/fgateway/ "
+
+cp ~/tempkernel/front ~/run/front/
+echo " cp ~/tempkernel/front ~/run/front/ "
+
+cp ~/tempkernel/mdkernel ~/run/mdkernel/
+echo " cp ~/tempkernel/mdkernel ~/run/mdkernel/ "
+
+cp ~/tempkernel/qkernel ~/run/qkernel/
+echo " cp ~/tempkernel/qkernel ~/run/qkernel/ "
+
+cp ~/tempkernel/tinit ~/run/tinit/
+echo " cp ~/tempkernel/tinit ~/run/tinit/ "
+
+cp ~/tempkernel/tkernel ~/run/tkernel/
+echo " cp ~/tempkernel/tkernel ~/run/tkernel/ "
+
+cp ~/tempkernel/tmdb ~/run/tmdb/
+echo " cp ~/tempkernel/tmdb ~/run/tmdb/ "
