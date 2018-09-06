@@ -6,5 +6,9 @@ this is my epository project for c++, it should be simple and clear as posible
 1. shell: 工作中常用的shell脚本收集
 2. frame: 框架基础使用
     1. zeromq
+   
+3. database: 数据库操作
+    1. sqlapi++
+
 
 

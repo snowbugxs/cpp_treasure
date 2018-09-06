@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="GB2312"?>
+
+<config>
+	<!-- 
+	服务配置:
+	logdir : 日志目录 
+	logprefix : 日志文件名
+	queryhost : 报警访问IP
+	queryport : 报警访问端口
+	runlog : 运行日志 1 : 开起; 0 : 关闭
+	-->
+	<basic logdir = "../log/" logprefix = "findex" queryhost = "0.0.0.0" queryport = "12309" mdbdir="../imdb/" runlog = "1"/>
+	
+	<!-- 
+	服务配置:
+	host :   前置访问IP
+	listen : 前置访问端口
+	maxclient : 客户最大连接数
+	conntimeout : 超时
+	maxoneinpacklen : 最大包长
+  workthread:处理线程 数目 
+	-->
+	<clientconn hostip="0.0.0.0" listenport="19208" maxclient="21024" conntimeout="3000" maxoneinpacklen="10485760" workthread="1" beattimeout="10" beatthreadsleep="2" />
+
+        <mdmarketcfg Userid="900000029" Passwd="111111" Topicid="101" TopicType="0" mdfront="tcp://127.0.0.1:15822" />
+
+</config>
